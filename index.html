@@ -18,16 +18,18 @@
     <h1>JavaScript for interactive apps!</h1>
     <h3>Right-click / Inspect, then select console</h3>
 
-    <p>Enter your name:
-      <input id="guest" type="text" value="Eden">
+    
+
+    <p>Enter length:
+      <input id="lengthnumber" type="number" value="2">
     </p>
 
-    <p>Enter first number:
-      <input id="firstNumber" type="number" value="7">
+    <p>Enter width:
+      <input id="widthnumber" type="number" value="2">
     </p>
 
-    <p>Enter second number:
-      <input id="secondNumber" type="number" value="12">
+    <p>Enter height:
+      <input id="heightnumber" type="number" value="2">
     </p>
 
     <button id="clicker" class="btn btn-primary">Click me!</button>
@@ -41,23 +43,24 @@
 
     console.log('Declare testable functions.....................')
 
-    function add(x, y) {
-      return x + y
+    function mul(x, y, z) {
+      return x * y * z
     }
-    console.log('Defined add=' + add)
-
+    console.log('Defined mul=' + mul)
     console.log('Declare event listeners .......................')
-
     document.getElementById('clicker').addEventListener('click', function () {
-      const s = document.getElementById('guest').value
-      const i = parseInt(document.getElementById('firstNumber').value)
+      
+      const i = parseInt(document.getElementById('lengthnumber').value)
       console.log('i=' + i)
-      const j = parseInt(document.getElementById('secondNumber').value)
+      const j = parseInt(document.getElementById('widthnumber').value)
       console.log('j=' + j)
-      const ans = s + ', your sum is ' + add(i, j) + '.'
+      const k = parseInt(document.getElementById('heightnumber').value)
+      console.log('k=' + k)
+      const ans =  'Your volume is ' + mul(i, j, k) + '.'
       document.getElementById('result').innerHTML = ans
     })
 
+   
     console.log('SCRIPT END')
   </script>
 
